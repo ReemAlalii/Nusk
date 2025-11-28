@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول | إنشاء حساب</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Amiri", sans-serif;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 380px;
+            background: #C9A75C;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+            color: white;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: white;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #b28d3b;
+            border: none;
+            border-radius: 8px;
+            color: #0E0E0E;
+            font-size: 18px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background-color: #b3831a;
+            color: white;
+        }
+
+        .switch {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        .switch a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="book.html">
+    <div class="container" id="loginBox">
+        <h2>تسجيل الدخول</h2>
+        <input type="email" placeholder="البريد الإلكتروني" required>
+        <input type="password" placeholder="كلمة المرور" required minlength="8">
+        <a href="book.html"><button class="btn">دخول</button></a>
+        <p class="switch">ليس لديك حساب؟ <a href="#" onclick="showRegister()">إنشاء حساب</a></p>
+    </div>
+    </form>
+    <form action="book.html" id="registerForm">
+    <div class="container" id="registerBox" style="display:none;">
+        <h2>إنشاء حساب</h2>
+        <input type="text" placeholder="الاسم الكامل" required>
+        <input type="email"  placeholder="البريد الإلكتروني" required>
+        <input type="password" id="password" placeholder="كلمة المرور" required minlength="8">
+        <input type="password" id="confirmPassword" placeholder="تأكيد كلمة المرور" required required minlength="8">
+        <button class="btn">إنشاء حساب</button></a>
+        <p class="switch">لديك حساب بالفعل؟ <a href="#" onclick="showLogin()">تسجيل دخول</a></p>
+    </div>
+</form>
+    <script>
+        function showRegister() {
+            document.getElementById('loginBox').style.display = 'none';
+            document.getElementById('registerBox').style.display = 'block';
+        }
+
+        function showLogin() {
+            document.getElementById('registerBox').style.display = 'none';
+            document.getElementById('loginBox').style.display = 'block';
+        }
+        let password = document.getElementById("password");
+        let confirmPassword = document.getElementById("confirmPassword");
+        let registerForm = document.getElementById("registerForm");
+
+        registerForm.addEventListener("submit",function(event){
+            if(password.value!==confirmPassword.value){
+                event.preventDefault();
+                alert("كلمتا المرور غير متطابقتين")
+            }
+        })
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+

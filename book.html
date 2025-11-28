@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+    font-family: "Tajawal", sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url("your-image.jpg") center/cover no-repeat;
+    direction: rtl;
+    padding: 40px 10px;
+}
+
+.booking-container {
+    max-width: 430px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px 30px;
+    border-radius: 18px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 25px rgba(0,0,0,0.4);
+}
+
+.title {
+    text-align: center;
+    color: #E5B200;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.desc {
+    text-align: center;
+    color: #ddd;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+label {
+    color: #fff;
+    font-size: 15px;
+    margin: 8px 0 4px;
+    display: block;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #E5B200;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background: #c89b00;
+}
+
+.note {
+    text-align: center;
+    color: #fff;
+    margin-top: 12px;
+    font-size: 13px;
+}
+</style>
+<body>
+    <div class="booking-container">
+
+    <h2 class="title">احجز رحلتك الآن</h2>
+
+    <p class="desc">
+        مرحبًا بك في منصة الحجز الرسمية للحج والعمرة.  
+        يرجى تعبئة البيانات التالية لإتمام الحجز بسهولة وسرعة.
+    </p>
+
+    <form>
+
+        <label>نوع الرحلة</label>
+        <select>
+            <option>عمرة</option>
+            <option>حج</option>
+        </select>
+
+        <label>تاريخ الذهاب</label>
+        <input type="date">
+
+        <label>تاريخ العودة</label>
+        <input type="date">
+
+        <label>عدد الأشخاص</label>
+        <input type="number" min="1" placeholder="مثال: 3">
+
+        <label>نوع الباقة</label>
+        <select>
+            <option>اقتصادية</option>
+            <option>مميزة</option>
+            <option>VIP</option>
+        </select>
+
+        <label>المدينة التي تسافر منها</label>
+        <input type="text" placeholder="مثال: عمّان">
+
+        <label>ملاحظات (اختياري)</label>
+        <textarea placeholder="أدخل أي تفاصيل إضافية"></textarea>
+
+        <button class="submit-btn">إرسال الطلب</button>
+
+        <p class="note">سيتم التواصل معك خلال 24 ساعة لتأكيد الحجز</p>
+
+    </form>
+
+</div>
+</body>
+</html>
